@@ -9,12 +9,12 @@ export default function({ store }) {
   const handlers = buildHandlers(store)
   const builtFunctions = buildFunctions({}, handlers, functions)
 
-  const buildReduxFunctions = ([name, cmdCreator]) => {
+  const buildReduxFunctions = ([name, actionCreator]) => {
     const f = function() {
-      const cmd = cmdCreator.apply(null, arguments)
+      const action = actionCreator.apply(null, arguments)
 
       function* doDispatch() {
-        return yield cmds.reduxDispatch(cmd)
+        return yield cmds.reduxDispatch(action)
       }
       return call({}, handlers, doDispatch).catch(console.error)
     }

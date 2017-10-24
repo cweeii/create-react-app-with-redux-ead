@@ -1,6 +1,6 @@
 import { map, zipObj, pipe } from 'ramda'
 
-function buildAction(type) {
+function buildActionCreator(type) {
   return payload => ({
     type,
     payload
@@ -9,7 +9,7 @@ function buildAction(type) {
 
 const actionTypes = []
 
-const genFxns = map(buildAction)
+const genFxns = map(buildActionCreator)
 const objectify = zipObj(actionTypes)
 
 export default pipe(genFxns, objectify)(actionTypes)
