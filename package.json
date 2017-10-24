@@ -1,0 +1,27 @@
+{
+  "name": "auth0-shared-quotes-list",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "effects-as-data": "^2.14.9",
+    "effects-as-data-universal": "^4.2.0",
+    "object-path": "^0.11.4",
+    "object-path-immutable": "^0.5.2",
+    "ramda": "^0.25.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "react-scripts": "1.0.14",
+    "redux": "^3.7.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "raf": "^3.4.0",
+    "sinon": "^4.0.1"
+  }
+}
